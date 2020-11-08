@@ -16,9 +16,6 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 app.use('/users', userRouter);
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('build'));
-}
 
 app.get('/', (req, res) => {
   res.send('Hello from Posts API');
